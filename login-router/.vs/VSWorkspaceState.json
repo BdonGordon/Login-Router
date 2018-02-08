@@ -1,8 +1,12 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src"
+    "\\src",
+    "\\src\\routes",
+    "\\src\\routes\\Login",
+    "\\src\\routes\\Login\\components",
+    "\\src\\routes\\Login\\containers"
   ],
-  "SelectedNode": "\\src\\index.tsx",
+  "SelectedNode": "\\src\\routes\\Login\\containers\\LoginContainer.tsx",
   "PreviewInSolutionExplorer": false
 }

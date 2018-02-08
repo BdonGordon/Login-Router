@@ -1,6 +1,9 @@
 ﻿import * as React from 'react';
 import { LoginProps } from '../containers/LoginContainer';
+import { withRouter } from 'react-router-dom';
+import { login } from '../../../modules/authentication';
 
+const logo = require('../../../logo.svg');
 //initialize the initial state of the LoginProps.IState "object" properties
 const initialState: LoginProps.IState = {
     username: '',
@@ -27,9 +30,14 @@ class Login extends React.Component<LoginProps.IProps, LoginProps.IState> {
 
     handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
-        //forgot that to refer to the username and password, i use "this.state.variable"
-        if (this.state.username.length > 0 && this.state.password.length > 0) {
-            alert('Submission pressed ' + this.state.username + ' ' + this.state.password);
+        //forgot that to refer to the username and password, i use "this.state.variable". The 
+        /**
+         * var checker: boolean = this.props.userlogin(this.state.username, this.state.password);
+         * This function does not work called from this.props. because it does not have reducers in place in the LoginContainer
+         */
+        //temporarily going to call login like so: 
+        if (login(this.state.username, this.state.password)) {
+            alert('Successfully logged in');
             this.props.history.push('/aboutus');
         }
         else {
@@ -40,6 +48,10 @@ class Login extends React.Component<LoginProps.IProps, LoginProps.IState> {
     render() {
         return (
             <div>
+                <header className="App-header">
+                    <img src={logo} className="App-logo" alt="logo" />
+                    <h1 className="App-title">Welcome to React</h1>
+                </header>
                 <form onSubmit={this.handleSubmit}>
                     <label className="label-margin"> Please enter username and password </label>
                     <br /><br />
@@ -54,4 +66,5 @@ class Login extends React.Component<LoginProps.IProps, LoginProps.IState> {
     }
 }
 
-export default Login;
+//unsure with withRouter does, but it works for now
+export default withRouter(Login);

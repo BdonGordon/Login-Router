@@ -1,4 +1,7 @@
 ﻿import * as React from 'react';
+import { login } from '../../../modules/authentication';
+import Login from '../components/Login';
+import { connect } from 'react-redux'; 
 
 export namespace LoginProps {
     export interface IStateProps {
@@ -7,8 +10,10 @@ export namespace LoginProps {
         history: { push: any };
     }
 
-    //I believe this is where the login(username, password) function will reside. unsure how it'll work though
-    export interface IDispatchProps { }
+    //This is not used since reducers are not in place.
+    export interface IDispatchProps {
+        login: (username: string, password: string) => boolean;
+    }
     export interface IOwnProps { } //unsure what this does
     export interface IProps extends IStateProps, IDispatchProps, IOwnProps { } //does nothing either
 
@@ -16,4 +21,8 @@ export namespace LoginProps {
         username: string;
         password: string;
     }
+    
 }
+
+//Will be implemented later
+//export default connect<LoginProps.IStateProps, LoginProps.IDispatchProps, LoginProps.IOwnProps>(mapStateToProps, mapDispatchToProps)(Login);
