@@ -6,10 +6,10 @@ import { Link } from 'react-router-dom';
 class BottomNavigation extends React.Component {
     render() {
         return (
-            <ul className="Bottom-Nav">
-                <li><Link to="/aboutus" className="No-underline">About Us</Link></li>
-                <li><Link to="/" className="No-underline">Login</Link></li>
-                <li><Link to="/contactus" className="No-underline">Contact Us</Link></li>
+            <ul className="Bottom-Nav" id="options_list">
+                <li id="aboutus_link"><Link to="/aboutus" className="No-underline">About Us</Link></li>
+                <li id="login_link"><Link to="/" className="No-underline">Login</Link></li>
+                <li id="contactus_link"><Link to="/contactus" className="No-underline">Contact Us</Link></li>
             </ul>
         );
     }

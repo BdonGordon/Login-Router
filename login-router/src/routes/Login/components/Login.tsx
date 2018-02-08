@@ -2,6 +2,7 @@
 import { LoginProps } from '../containers/LoginContainer';
 import { withRouter } from 'react-router-dom';
 import { login } from '../../../modules/authentication';
+import BottomNavigation from '../../../layouts/BottomNavigation';
 
 const logo = require('../../../logo.svg');
 //initialize the initial state of the LoginProps.IState "object" properties
@@ -38,7 +39,7 @@ class Login extends React.Component<LoginProps.IProps, LoginProps.IState> {
         //temporarily going to call login like so: 
         if (login(this.state.username, this.state.password)) {
             alert('Successfully logged in');
-            this.props.history.push('/aboutus');
+            this.props.history.push('/home');
         }
         else {
             alert('Invalid username or password');
@@ -61,6 +62,7 @@ class Login extends React.Component<LoginProps.IProps, LoginProps.IState> {
                     <br/>
                     <input type="submit" className="login-button" value="Login" />
                 </form>
+                <BottomNavigation />
             </div>
         );
     }

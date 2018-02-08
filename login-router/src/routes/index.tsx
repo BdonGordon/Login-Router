@@ -1,8 +1,9 @@
 ﻿import * as React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import Login from './Login/components/Login';
 import AboutUs from './AboutUs/components/AboutUs';
 import ContactUs from './ContactUs/components/ContactUs';
+import Home from './Home/components/Home';
 
 /**
 * This is /routes/index
@@ -17,6 +18,7 @@ class RouterIndex extends React.Component {
                     <Route exact={true} path="/" component={Login} />
                     <Route path="/aboutus" component={AboutUs} />
                     <Route path="/contactus" component={ContactUs} />
+                    <Route path="/home" component={Home} />
                 </Switch>
             </div>
         );

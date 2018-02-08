@@ -1,4 +1,5 @@
 ﻿import * as React from 'react';
+import BottomNavigation from '../../../layouts/BottomNavigation';
 
 const logo = require('../../../logo.svg');
 
@@ -11,6 +12,7 @@ class ContactUs extends React.Component {
                     <h1 className="App-title">Welcome to React</h1>
                 </header>
                 <h4> Contact Us </h4>
+                <BottomNavigation />
             </div>
         );
     }
