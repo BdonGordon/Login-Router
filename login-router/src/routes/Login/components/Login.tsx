@@ -30,6 +30,7 @@ class Login extends React.Component<LoginProps.IProps, LoginProps.IState> {
         //forgot that to refer to the username and password, i use "this.state.variable"
         if (this.state.username.length > 0 && this.state.password.length > 0) {
             alert('Submission pressed ' + this.state.username + ' ' + this.state.password);
+            this.props.history.push('/aboutus');
         }
         else {
             alert('Invalid username or password');

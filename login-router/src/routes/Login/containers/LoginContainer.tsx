@@ -4,6 +4,7 @@ export namespace LoginProps {
     export interface IStateProps {
         errorMessage?: string;
         error?: boolean;
+        history: { push: any };
     }
 
     //I believe this is where the login(username, password) function will reside. unsure how it'll work though
