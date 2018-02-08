@@ -27,7 +27,7 @@
     color:green;
     position: absolute;
     bottom: 10px;
-    width: 100%;
+    width: 95%;
     text-align: center;
 }
 
@@ -38,6 +38,34 @@
 li {
     display: inline;
     margin-right: 8px;
+}
+
+.div-center {
+    text-align: center;
+}
+
+.label-margin {
+    position: relative;
+    top: 5px;
+    bottom: 8px;
+}
+
+.input-fields {
+    margin-top: 8px;
+    border-radius: 12px;
+    border: 1px solid black;
+    padding: 4px;
+}
+
+.login-button {
+    padding: 4px;
+    border-radius: 60%;
+    border: 1px solid black;
+    margin-top: 10px;
+    color: white;
+    background-color: green;
+    height: 50px;
+    width: 50px;
 }
 
 @keyframes App-logo-spin {

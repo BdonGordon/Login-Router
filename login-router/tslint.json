@@ -2,7 +2,7 @@
   "extends": [ "tslint-react" ],
   "rules": {
     "align": [
-      true,
+      false,
       "parameters",
       "arguments",
       "statements"
@@ -18,7 +18,7 @@
     "forin": true,
     "indent": [ true, "spaces" ],
     "interface-name": [ false, "never-prefix" ], //false
-    "jsdoc-format": true,
+    "jsdoc-format": false, //changed
     "jsx-no-lambda": false,
     "jsx-no-multiline-js": false,
     "label-position": true,
