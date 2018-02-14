@@ -1,15 +1,15 @@
 import * as React from 'react';
 import './App.css';
-import BottomNavigation from './layouts/BottomNavigation';
-import RouterIndex from './routes/index';
-import Login from './routes/Login/components/Login';
+import AppContainer from './container/AppContainer';
+import { BrowserRouter } from 'react-router-dom';
 
 class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <RouterIndex />
-        
+            <BrowserRouter>
+                <AppContainer />
+            </BrowserRouter>
       </div>
     );
   }
