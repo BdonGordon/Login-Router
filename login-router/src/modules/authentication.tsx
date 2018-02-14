@@ -1,7 +1,23 @@
-﻿export function login(username: string, password: string): boolean {
-    if (username.length > 3 && password.length > 3) {
-        return true;
+﻿/** Action types for logging in**/
+
+export const LOGIN_REQUEST = 'LOGIN_REQUEST';
+export const LOGIN_RESPONSE = 'LOGIN_RESPONSE'; //this will be thrown into a simple function; response will be true or false (ie. username.length > 3 returns true
+
+export function login(username: string, password: string){
+    return {
+        type: LOGIN_REQUEST,
+        payload: username
+    };
+}
+
+export function authenticationReducer(state = {}, action) {
+    switch (action.type) {
+        case LOGIN_REQUEST:
+            return action.payload;
+
+        default:
+            break;
     }
-    
-    return false;
+
+    return state;
 }

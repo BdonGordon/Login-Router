@@ -1,7 +1,7 @@
 ﻿import * as React from 'react';
 import { LoginProps } from '../containers/LoginContainer';
 import { withRouter } from 'react-router-dom';
-import { login } from '../../../modules/authentication';
+//import { login } from '../../../modules/authentication';
 import BottomNavigation from '../../../layouts/BottomNavigation';
 
 const logo = require('../../../logo.svg');
@@ -37,13 +37,13 @@ class Login extends React.Component<LoginProps.IProps, LoginProps.IState> {
          * This function does not work called from this.props. because it does not have reducers in place in the LoginContainer
          */
         //temporarily going to call login like so: 
-        if (login(this.state.username, this.state.password)) {
+        /*if (login(this.state.username, this.state.password)) {
             alert('Successfully logged in');
             this.props.history.push('/home');
         }
         else {
             alert('Invalid username or password');
-        }
+        }*/
     }
 
     render() {

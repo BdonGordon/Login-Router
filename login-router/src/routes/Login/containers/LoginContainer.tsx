@@ -12,7 +12,7 @@ export namespace LoginProps {
 
     //This is not used since reducers are not in place.
     export interface IDispatchProps {
-        login: (username: string, password: string) => boolean;
+        //login: (username: string, password: string) => boolean;
     }
     export interface IOwnProps { } //unsure what this does
     export interface IProps extends IStateProps, IDispatchProps, IOwnProps { } //does nothing either
