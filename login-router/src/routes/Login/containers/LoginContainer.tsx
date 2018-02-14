@@ -21,8 +21,11 @@ export namespace LoginProps {
         username: string;
         password: string;
     }
-    
 }
 
-//Will be implemented later
+/**
+ * CHECKPOINT FEB 14, 2018 @ 16:10. Going to implement mapStateToProps()
+ **/
+
+export default Login;
 //export default connect<LoginProps.IStateProps, LoginProps.IDispatchProps, LoginProps.IOwnProps>(mapStateToProps, mapDispatchToProps)(Login);

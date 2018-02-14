@@ -21,3 +21,16 @@ export function authenticationReducer(state = {}, action) {
 
     return state;
 }
+
+/**
+ * NO idea what this is lol
+ **/
+declare interface ICallApiAction {
+    [x: number]: {
+        endpoint?: string,
+        method?: string,
+        types?: Array<string | object>,
+        headers?: { 'Content-Type': string },
+        body?: any
+    };
+}

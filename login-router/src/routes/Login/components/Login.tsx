@@ -31,19 +31,7 @@ class Login extends React.Component<LoginProps.IProps, LoginProps.IState> {
 
     handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
-        //forgot that to refer to the username and password, i use "this.state.variable". The 
-        /**
-         * var checker: boolean = this.props.userlogin(this.state.username, this.state.password);
-         * This function does not work called from this.props. because it does not have reducers in place in the LoginContainer
-         */
-        //temporarily going to call login like so: 
-        /*if (login(this.state.username, this.state.password)) {
-            alert('Successfully logged in');
-            this.props.history.push('/home');
-        }
-        else {
-            alert('Invalid username or password');
-        }*/
+
     }
 
     render() {
