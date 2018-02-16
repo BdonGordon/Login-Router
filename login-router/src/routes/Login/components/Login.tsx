@@ -5,6 +5,7 @@ import { withRouter } from 'react-router-dom';
 import BottomNavigation from '../../../layouts/BottomNavigation';
 
 const logo = require('../../../logo.svg');
+
 //initialize the initial state of the LoginProps.IState "object" properties
 const initialState: LoginProps.IState = {
     username: '',
@@ -31,7 +32,13 @@ class Login extends React.Component<LoginProps.IProps, LoginProps.IState> {
 
     handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
-
+        /*if (this.props.login(this.state.username, this.state.password)) {
+            this.props.history.push('/home');
+        }
+        else {
+            console.log('Failed');
+        }*/
+        //this.props.login(this.state.username, this.state.password);
     }
 
     render() {

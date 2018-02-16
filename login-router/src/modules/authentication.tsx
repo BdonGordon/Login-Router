@@ -25,6 +25,7 @@ export function authenticationReducer(state = {}, action) {
 /**
  * NO idea what this is lol
  **/
+/**
 declare interface ICallApiAction {
     [x: number]: {
         endpoint?: string,
@@ -34,3 +35,4 @@ declare interface ICallApiAction {
         body?: any
     };
 }
+**/
