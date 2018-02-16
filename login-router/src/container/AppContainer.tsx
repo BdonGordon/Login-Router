@@ -4,7 +4,7 @@ import { createStore } from 'redux';
 import CoreLayout from '../layouts/CoreLayout';
 import makeRootReducer from '../store/reducers';
 
-const store = createStore(makeRootReducer);
+export const store = createStore(makeRootReducer);
 
 class AppContainer extends React.Component {
     render() {

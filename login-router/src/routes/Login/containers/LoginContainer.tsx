@@ -11,6 +11,7 @@ export namespace LoginProps {
         //error?: boolean;
         //history: { push: any };
         user: string;
+        history: { push: any };
     }
 
     //This is not used since reducers are not in place.
@@ -39,7 +40,4 @@ function mapDispatchToProps(dispatch: any) {
     };
 }
 
-
-//export default Login;
 export default connect<LoginProps.IStateProps, LoginProps.IDispatchProps, LoginProps.IOwnProps>(mapStateToProps, mapDispatchToProps)(Login);
-//export default connect(mapStateToProps, mapDispatchToProps)(Login);

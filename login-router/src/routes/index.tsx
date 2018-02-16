@@ -1,6 +1,6 @@
 ﻿import * as React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
-import Login from './Login/containers/LoginContainer';
+import Login from './Login/containers/LoginContainer'; //get the class from the container since it exports Login with the connect
 import AboutUs from './AboutUs/components/AboutUs';
 import ContactUs from './ContactUs/components/ContactUs';
 import Home from './Home/components/Home';
@@ -8,8 +8,6 @@ import Home from './Home/components/Home';
 /**
 * This is /routes/index
 **/
-
-// Notice that the path="/" is for Login which is the FIRST apparent screen to show
 class RouterIndex extends React.Component {
     render() {
         return (
