@@ -1,7 +1,18 @@
 ﻿/** Action types for logging in**/
+import { IUser } from '../models/User';
 
 export const LOGIN_REQUEST = 'LOGIN_REQUEST';
 export const LOGIN_RESPONSE = 'LOGIN_RESPONSE'; //this will be thrown into a simple function; response will be true or false (ie. username.length > 3 returns true
+
+export interface IAuthState {
+    readonly isAuthenticated: boolean;
+    readonly userName: string;
+}
+
+const initialState: IAuthState = {
+    isAuthenticated: false,
+    userName: ''
+};
 
 export function login(username: string, password: string){
     return {
@@ -10,11 +21,14 @@ export function login(username: string, password: string){
     };
 }
 
-export function authenticationReducer(state = {}, action) {
+
+export function authenticationReducer(state: IAuthState = initialState, action) {
     switch (action.type) {
         case LOGIN_REQUEST:
-            return action.payload;
-
+            return Object.assign({}, state, {
+                isAuthenticated: true,
+                userName: 'bGordon'
+            });
         default:
             break;
     }

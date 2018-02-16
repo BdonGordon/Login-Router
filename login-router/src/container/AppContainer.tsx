@@ -1,5 +1,5 @@
 ﻿import * as React from 'react';
-import { Provider } from 'react-redux';
+import { Provider, Store } from 'react-redux';
 import { createStore } from 'redux';
 import CoreLayout from '../layouts/CoreLayout';
 import makeRootReducer from '../store/reducers';

@@ -1,6 +1,6 @@
 ﻿import * as React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
-import Login from './Login/components/Login';
+import Login from './Login/containers/LoginContainer';
 import AboutUs from './AboutUs/components/AboutUs';
 import ContactUs from './ContactUs/components/ContactUs';
 import Home from './Home/components/Home';

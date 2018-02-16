@@ -3,10 +3,10 @@ import { LoginProps } from '../containers/LoginContainer';
 import { withRouter } from 'react-router-dom';
 //import { login } from '../../../modules/authentication';
 import BottomNavigation from '../../../layouts/BottomNavigation';
-
 const logo = require('../../../logo.svg');
 
 //initialize the initial state of the LoginProps.IState "object" properties
+
 const initialState: LoginProps.IState = {
     username: '',
     password: ''
@@ -31,14 +31,7 @@ class Login extends React.Component<LoginProps.IProps, LoginProps.IState> {
     }
 
     handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-        e.preventDefault();
-        /*if (this.props.login(this.state.username, this.state.password)) {
-            this.props.history.push('/home');
-        }
-        else {
-            console.log('Failed');
-        }*/
-        //this.props.login(this.state.username, this.state.password);
+        this.props.login('fds', 'fds');
     }
 
     render() {
@@ -57,6 +50,9 @@ class Login extends React.Component<LoginProps.IProps, LoginProps.IState> {
                     <br/>
                     <input type="submit" className="login-button" value="Login" />
                 </form>
+                <div>
+                    {this.props.user}
+                </div>
                 <BottomNavigation />
             </div>
         );
